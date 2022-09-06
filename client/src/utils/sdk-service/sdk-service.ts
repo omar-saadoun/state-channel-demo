@@ -12,7 +12,7 @@ export const NODE_URL =
 export const COMPILER_URL =
   import.meta.env.VITE_COMPILER_URL ?? 'http://localhost:3080';
 export const IS_USING_LOCAL_NODE = !import.meta.env.VITE_NODE_URL.includes(
-  'testnet.aeternity.io'
+  'testnet'
 );
 const FAUCET_PUBLIC_ADDRESS = import.meta.env
   .VITE_FAUCET_PUBLIC_ADDRESS as Encoded.AccountAddress;
@@ -49,7 +49,10 @@ export async function returnCoinsToFaucet() {
   );
   if (BigInt(userBalance) <= 0) return;
   try {
-    await sdk.transferFunds(1, FAUCET_PUBLIC_ADDRESS);
+    await sdk.transferFunds(
+      1,
+      'ak_2iBPH7HUz3cSDVEUWiHg76MZJ6tZooVNBmmxcgVK6VV8KAE688'
+    );
   } catch (e) {
     console.error({ e }, 'failed to return funds to faucet');
   }

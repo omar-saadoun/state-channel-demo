@@ -1,4 +1,4 @@
-export const NODE_URL = "https://testnet.aeternity.io ";
+export const NODE_URL = "http://testnet.prd.aepps.com:3013";
 export const WS_URL = "wss://sdk-testnet.aepps.com/channel ";
 export const COMPILER_URL = "https://compiler.aepps.com";
 export const FAUCET_PUBLIC_ADDRESS =

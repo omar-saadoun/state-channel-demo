@@ -72,7 +72,7 @@ export async function fundThroughFaucet(
  * Funds account based on which network is used.
  */
 export async function fundAccount(account: Encoded.AccountAddress) {
-  if (!IS_USING_LOCAL_NODE) {
+  if (true) {
     try {
       await fundThroughFaucet(account);
     } catch (error) {
